@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block body %}
+<script type="text/javascript">
+  function abre1()
+  {
+    window.open("pedido");
+  }
+</script>
+<div class="container p-5">
+  <script type="text/javascript" src="{{url_for('static', filename='js/expediente.js', _external=true)}}"></script>
+  <div class="card-group">
+    <div class="card">
+      <img src="{{url_for('static', filename='img/ham1.png')}}" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Hamburguer 1</h5>
+        <p class="card-text">Hamburguer 1 + refrigerante - R$15,00</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="{{url_for('static', filename='img/ham2.jpg')}}" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Hamburguer 2</h5>
+        <p class="card-text">Hamburguer 2 + refrigerante - R$15,00</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="{{url_for('static', filename='img/ham3.png')}}" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Hamburguer 3</h5>
+        <p class="card-text">Hamburguer 3 + refrigerante - R$15,00</p>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="abre1()">Fazer Pedido</button>
+</div>
+
+{%endblock%}

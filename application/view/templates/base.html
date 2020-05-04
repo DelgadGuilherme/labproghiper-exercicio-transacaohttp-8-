@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+        <title>Hamburgueria Artesanal</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="{{url_for('home')}}">
+                Hamburgueria Artesanal
+            </a>
+            <span class="navbar-text">
+                <script type="text/javascript" src="{{url_for('static', filename='js/saudacao.js', _external=true)}}"></script>
+                <script type="text/javascript" src="{{url_for('static', filename='js/dia.js', _external=true)}}"></script>
+            </span>
+        </nav>
+
+        {% block body %}{% endblock %}
+        
+        <script scr="{{url_for('static', filename='js/jquery-3.5.0.min', _external=true)}}"></script>
+        <script scr="{{url_for('static', filename='js/bootstrap.min.js', _external=true)}}"></script>
+    </body>
+</html>
